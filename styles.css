@@ -1,0 +1,121 @@
+:root {
+  --bg: #f4f8fb;
+  --ink: #102a43;
+  --muted: #627d98;
+  --line: #d9e2ec;
+  --accent: #0b6e99;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, #d9eefc 0%, transparent 40%),
+    linear-gradient(160deg, #f7fbff, #e8f1f8);
+  min-height: 100vh;
+}
+
+.top {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-weight: 800;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+nav a[aria-current="page"],
+nav a:hover {
+  color: var(--accent);
+}
+
+.wrap {
+  width: min(920px, calc(100% - 32px));
+  margin: 40px auto 64px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+h1 { margin: 8px 0 12px; font-size: 40px; }
+.lead { color: var(--muted); font-size: 18px; line-height: 1.5; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 10px 30px rgba(16,42,67,0.06);
+}
+
+.card h2 { margin: 0 0 8px; font-size: 18px; }
+.card p { margin: 0; color: var(--muted); }
+
+.note {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.note h2 { margin-top: 0; }
+code {
+  background: #e6eef5;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+.prose h2 { margin-top: 28px; }
+.prose ul { line-height: 1.7; }
+.prose pre {
+  background: #102a43;
+  color: #f0f4f8;
+  padding: 14px;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+#swagger-ui { background: #fff; }

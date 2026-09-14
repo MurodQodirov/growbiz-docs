@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GrowBiz Sprint</title>
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./index.html">GrowBiz Docs</a>
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./api.html">API (Swagger)</a>
+    <a href="./reference.html">API Reference</a>
+    <a href="./sprint.html" aria-current="page">Sprint</a>
+  </nav>
+</header>
+<main class="wrap prose">
+<h1>4 haftalik sprint (2 kishi)</h1>
+<p>Maqsad: TZ dagi **1-bosqich yadrosi** — Auth, oddiy HRIS, Task Board, baza CRM + web/mobile clientlar.  </p>
+<p>To‘liq 8-modul GrowBiz 4 haftada tugamaydi; shu MVP ishlaydigan demo bo‘ladi.</p>
+<h2>Rollar</h2>
+<ul>
+<li>**Backend (@MurodQodirov):** <code>services/api</code>, MySQL, API shartnoma</li>
+<li>**Frontend (@MamadaliyevAzizbek):** <code>apps/web</code>, <code>apps/mobile</code></li>
+</ul>
+<h2>Hafta 1 — Yadro + Auth</h2>
+<p>| # | Vazifa | Owner |</p>
+<p>|---|--------|-------|</p>
+<p>| W1-BE | MySQL + FastAPI health + register/login/me | Backend |</p>
+<p>| W1-FE-W | Web login/register UI → API | Frontend |</p>
+<p>| W1-FE-M | Mobile login/register UI → API | Frontend |</p>
+<p>| W1-DOC | `docs/api.md` ni yangilab kelishish | Ikkalangiz |</p>
+<h2>Hafta 2 — Tashkilot + Task Board</h2>
+<p>| # | Vazifa | Owner |</p>
+<p>|---|--------|-------|</p>
+<p>| W2-BE-ORG | Organization / departments / employees CRUD | Backend |</p>
+<p>| W2-BE-TASK | Boards, lists, cards API (Trello uslubi) | Backend |</p>
+<p>| W2-FE-ORG | Web: org tree / xodimlar ro‘yxati | Frontend |</p>
+<p>| W2-FE-TASK | Web + mobile: kanban board | Frontend |</p>
+<h2>Hafta 3 — CRM baza</h2>
+<p>| # | Vazifa | Owner |</p>
+<p>|---|--------|-------|</p>
+<p>| W3-BE-CRM | Leads, deals, pipeline stages API | Backend |</p>
+<p>| W3-FE-CRM-W | Web CRM: lidlar, bitimlar, drag voronka | Frontend |</p>
+<p>| W3-FE-CRM-M | Mobile: lidlar/bitimlar ro‘yxati + forma | Frontend |</p>
+<h2>Hafta 4 — LMS mini + polish</h2>
+<p>| # | Vazifa | Owner |</p>
+<p>|---|--------|-------|</p>
+<p>| W4-BE-LMS | Kurslar/darslar CRUD + progress (video URL oddiy) | Backend |</p>
+<p>| W4-FE-LMS | Web/mobile: kurslar ro‘yxati va o‘tish | Frontend |</p>
+<p>| W4-QA | Bugfix, README, demo scenario, UAT checklist | Ikkalangiz |</p>
+<h2>Qoida</h2>
+<p>1. Har vazifa = alohida branch + PR  </p>
+<p>2. Frontend mock bilan boshlashi mumkin; API tayyor bo‘lgach ulaydi  </p>
+<p>3. Umumiy shartnoma: <code>docs/api.md</code></p>
+</main>
+</body>
+</html>

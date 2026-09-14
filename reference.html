@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GrowBiz API Reference</title>
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./index.html">GrowBiz Docs</a>
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./api.html">API (Swagger)</a>
+    <a href="./reference.html" aria-current="page">API Reference</a>
+    <a href="./sprint.html">Sprint</a>
+  </nav>
+</header>
+<main class="wrap prose">
+<h1>GrowBiz API shartnomasi (MVP)</h1>
+<p>Base URL: <code>http://localhost:8001</code>  </p>
+<p>Auth: <code>Authorization: Bearer &lt;token&gt;</code> (auth/health dan tashqari hammasi)</p>
+<h2>Health / Auth</h2>
+<ul>
+<li><code>GET /health</code></li>
+<li><code>POST /api/v1/auth/register</code> <code>{name, phone, password}</code></li>
+<li><code>POST /api/v1/auth/login</code> <code>{phone, password}</code></li>
+<li><code>GET /api/v1/auth/me</code></li>
+</ul>
+<h2>Org</h2>
+<ul>
+<li><code>GET/POST /api/v1/org/organizations</code></li>
+<li><code>GET/PATCH/DELETE /api/v1/org/organizations/{id}</code></li>
+<li><code>GET/POST /api/v1/org/organizations/{id}/departments</code></li>
+<li><code>PATCH/DELETE /api/v1/org/departments/{id}</code></li>
+<li><code>GET/POST /api/v1/org/organizations/{id}/employees</code></li>
+<li><code>PATCH/DELETE /api/v1/org/employees/{id}</code></li>
+</ul>
+<h2>Task Board</h2>
+<ul>
+<li><code>GET /api/v1/boards?organization_id=</code></li>
+<li><code>POST /api/v1/boards</code> <code>{organization_id, name}</code> → default lists: To Do / In Progress / Done</li>
+<li><code>GET /api/v1/boards/{id}</code></li>
+<li><code>DELETE /api/v1/boards/{id}</code></li>
+<li><code>POST /api/v1/boards/{id}/lists</code></li>
+<li><code>PATCH/DELETE /api/v1/boards/lists/{id}</code></li>
+<li><code>GET/POST /api/v1/boards/lists/{id}/cards</code></li>
+<li><code>PATCH/DELETE /api/v1/boards/cards/{id}</code> (move: <code>list_id</code>)</li>
+</ul>
+<h2>CRM</h2>
+<ul>
+<li><code>GET/POST /api/v1/crm/pipelines</code> (POST stages default: New→Lost)</li>
+<li><code>GET /api/v1/crm/pipelines/{id}</code></li>
+<li><code>GET/POST /api/v1/crm/leads</code></li>
+<li><code>PATCH/DELETE /api/v1/crm/leads/{id}</code></li>
+<li><code>GET/POST /api/v1/crm/deals</code></li>
+<li><code>PATCH/DELETE /api/v1/crm/deals/{id}</code> (move stage: <code>stage_id</code>)</li>
+</ul>
+<h2>LMS</h2>
+<ul>
+<li><code>GET/POST /api/v1/lms/courses</code></li>
+<li><code>GET/PATCH/DELETE /api/v1/lms/courses/{id}</code></li>
+<li><code>POST /api/v1/lms/courses/{id}/lessons</code></li>
+<li><code>PATCH/DELETE /api/v1/lms/lessons/{id}</code></li>
+<li><code>GET /api/v1/lms/progress/me?course_id=</code></li>
+<li><code>PUT /api/v1/lms/progress</code> <code>{lesson_id, completed, progress_percent}</code></li>
+</ul>
+<p>OpenAPI: http://localhost:8001/docs</p>
+</main>
+</body>
+</html>
